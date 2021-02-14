@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Malware detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <header>
+      <div class="main-navigation">
+        <center><div class="navbar-default ">Submit training dataset | Grow detection database | Contact us</div></center>
+
+      </div>
+      <div class="container">
+       <center>
+        <h1 class="logo">Malware detection System</h1>
+       </center>
+
+      </div>
+
+    </header>
+    <center>
+    <div class="container" align="center">
+      This is a PhD Thesis of Joshua Sopuru under the supervision of Assoc. Prof Arif Sari. This system detects
+      Android malware based on 7 network flow-based features.
+    </div>
+    </center>
+
+  <br align="center" >
+
+    {{message}} <br>
+    <br>
+
+<center>
+    <form action="/" method="post">
+
+      F1: <input type="text" name="data1" disabled="True", value="{{request.form.data1}}">
+      F2: <input type="text" name="data2" disabled="True", value="{{request.form.data2}}">
+      F3: <input type="text" name="data3" disabled="True", value="{{request.form.data3}}">
+      F4: <input type="text" name="data4" disabled="True", value="{{request.form.data4}}">
+      F5: <input type="text" name="data5" disabled="True", value="{{request.form.data5}}">
+      F6: <input type="text" name="data6" disabled="True", value="{{request.form.data6}}">
+      F7: <input type="text" name="data7" disabled="True", value="{{url7}}">
+      <p> Extracted flow: <input type="file" name = "data8", value="{{request.form.data8}}"></p>
+      <input type="submit" value="Process">
+
+
+    </form>
+
+
+
+
+    <br>
+
+    This is the result from our model: <font color="red" >{{result}}</font>
+    File name {{p1}}
+    Data from excel {{df}}
+    <img src="{{fe2}}" height="42" width="42">
+
+  </div>
+<center>
+  <img src="{{full_filename}}">
+
+</center>
+
+  </center>
+  </body>
+
+</html>
